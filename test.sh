@@ -32,13 +32,13 @@ fn="/storage/pictures/pH/pH"
 nf=".jpg"
 
 # while loop to determine the frequency of the pictures taken
+# for 1h use i -eq 720 in if conditional 
 i=1
 while true
 do
    filename="$HOME/$fn$i$nf"
    echo "File saved at $filename / number of cycle: $i"
    termux-camera-photo -c 0 $filename
-   sleep 2
    
    if [ $i	-eq 5 ]
    then 
@@ -46,4 +46,6 @@ do
    fi
    
    i=$((i+1))
+   sleep 5
 done	
+
