@@ -4,8 +4,14 @@
 # To run this script go to: cd /sdcard/files_scripts/personal_android
 # Run in bash (terminal): sh ./tablet_pH.sh 
 
+echo "Initializing program..."
+echo "Okay, everything is fine."
+echo "Now sleeping 30 seconds..."
+sleep 30
+echo "Awake and working..."
+
 # components for the filename (photo label)
-fn="/storage/music/pH/pH"
+fn="/storage/music/pHii/pHii"
 nf=".jpg"
 
 # while loop to determine the frequency of the pictures taken
@@ -17,7 +23,7 @@ do
    echo "File saved at $filename / number of cycle: $i"
    termux-camera-photo -c 0 $filename
    
-   if [ $i	-eq 5 ]
+   if [ $i	-eq 1000 ]
    then 
        break 
    fi
