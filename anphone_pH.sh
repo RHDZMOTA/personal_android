@@ -24,11 +24,11 @@ do
    echo "File saved at $filename / number of cycle: $i"
    termux-camera-photo -c 0 $filename
    
-   if [ $i	-eq 1000 ]
+   if [ $i	-eq 3000 ]
    then 
        break 
    fi
    
    i=$((i+1))
-   sleep 5
+   sleep 2
 done	
